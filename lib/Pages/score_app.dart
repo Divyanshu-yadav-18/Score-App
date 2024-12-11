@@ -19,7 +19,10 @@ class _ScoreAppState extends State<ScoreApp> {
         centerTitle: true,
       ),
       
-      body: ,
+        body: FutureBuilder(
+          future: ,//getdata
+          builder: ,//layout
+        ), ,
     );
   }
 }
