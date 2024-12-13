@@ -18,7 +18,6 @@ class ScoreApi {
     if (res.statusCode == 200) {
       body = jsonDecode(res.body);
       List<dynamic> matchList = body['response'];
-      print('Api service:${body}');
       List<ScoreMatch> matches =
           matchList.map((dynamic item) => ScoreMatch.fromJson(item)).toList();
 

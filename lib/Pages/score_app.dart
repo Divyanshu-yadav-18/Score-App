@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:score_app/Pages/page_body.dart';
 import 'package:score_app/api/api_management.dart';
 
 class ScoreApp extends StatefulWidget {
@@ -26,8 +27,9 @@ class _ScoreAppState extends State<ScoreApp> {
         future: ScoreApi().getAllMatches(), //getdata
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            return pageBody(snapshot.data);
           } else {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }

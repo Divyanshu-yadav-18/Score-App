@@ -16,7 +16,7 @@ class ScoreMatch {
 
 class Fixture {
   int id;
-  int date;
+  String date;
   Status status;
   Fixture(this.id, this.date, this.status);
 
